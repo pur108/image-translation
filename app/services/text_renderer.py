@@ -63,11 +63,12 @@ class TextRenderer:
         else:
             tokens = text.split(" ")
 
+        sep = "" if lang == "th" else " "
         lines: list[str] = []
         current_line = ""
 
         for token in tokens:
-            test_line = current_line + token if current_line else token
+            test_line = current_line + sep + token if current_line else token
             bbox = font.getbbox(test_line)
             text_width = bbox[2] - bbox[0]
 
