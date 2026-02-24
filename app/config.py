@@ -8,8 +8,13 @@ class Settings(BaseSettings):
 
     REDIS_URL: str = "redis://localhost:6379/0"
 
+    TRANSLATION_PROVIDER: str = "openai"  # "deepl" or "openai"
+
     DEEPL_API_KEY: str = ""
     DEEPL_FREE_API: bool = True
+
+    OPENAI_API_KEY: str = ""
+    OPENAI_MODEL: str = "gpt-5-nano"
 
     SUPABASE_URL: str = ""
     SUPABASE_STORAGE_BUCKET: str = "comics"
